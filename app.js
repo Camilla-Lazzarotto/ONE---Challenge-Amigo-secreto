@@ -27,3 +27,16 @@ function atualizaListaAmigos ()
         document.querySelector("#listaAmigos").innerHTML += `<li>${amigos[i]}</li>`;
     }
 }
+
+function sortearAmigo()
+{
+    if (amigos.length == 0)
+    {
+        alert("Adicione amigos para o sorteio.");
+    }
+    else
+    {
+        let indice = Math.floor(Math.random() * amigos.length);
+        document.querySelector("#resultado").innerHTML = `<li>${amigos[indice]}</li>`
+    }
+}
